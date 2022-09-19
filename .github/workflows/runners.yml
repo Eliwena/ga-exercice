@@ -13,7 +13,7 @@ jobs:
 
     defaults:
       run: 
-        working_directory: node-app
+        working-directory: node-app
     
     # name: Node ${{ matrix.node }} sample
 
