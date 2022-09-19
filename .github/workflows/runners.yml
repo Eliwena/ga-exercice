@@ -7,9 +7,11 @@ jobs:
   build:
     strategy:
       matrix:
-        node: [ 14, 16, 18 ]
-    
-    runs-on: ubuntu-latest
+        node: [ 12, 14, 16 ]
+     strategy:
+      matrix:
+        os: [ ubuntu-latest, windows-lates ]
+    runs-on: ${{matrix.os}}
 
     defaults:
       run: 
