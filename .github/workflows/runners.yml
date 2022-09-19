@@ -10,11 +10,18 @@ jobs:
       matrix:
         node: [ 14, 16, 18 ]
     name: Node ${{ matrix.node }} sample
+    # steps:
+    #   - uses: actions/checkout@v3
+    #   - name: Setup node
+    #     uses: actions/setup-node@v3
+    #     with:
+    #       node-version: ${{ matrix.node }}
+    #   - run: npm ci
+    #   - run: npm test
     steps:
       - uses: actions/checkout@v3
-      - name: Setup node
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 16
       - run: npm ci
       - run: npm test
