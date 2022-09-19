@@ -9,10 +9,13 @@ jobs:
     strategy:
       matrix:
         node: [ 14, 16, 18 ]
-    name: Node ${{ matrix.node }} sample
+
     defaults:
-      run: 
+      - run: 
         working_directory: node-app
+    
+    name: Node ${{ matrix.node }} sample
+
     steps:
       - uses: actions/checkout@v3
       - name: Setup node
